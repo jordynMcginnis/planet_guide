@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router-dom";
+import Residents from './Residents';
+import Planets from './Planets';
+import Resident from './Resident';
+import './index.css';
+import image from './images/starwarsLogo.png'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='stars'>
+      <div className='twinkling'>
+        <div className='app'>
+          <img className='image'src={image} alt="starwars" />
+          <Route exact path='/' component={Planets}/>
+          <Route exact path='/residents/:planet' component={Residents}/>
+          <Route exact path='/residents/:planet/:resident' component={Resident}/>
+        </div>
+      </div>
     </div>
   );
 }
