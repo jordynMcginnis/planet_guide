@@ -1,4 +1,4 @@
-###Starwars Planet Guide
+### Starwars Planet Guide
 
 Get Started: 
 - clone
